@@ -1,0 +1,101 @@
+.wrapper {
+    width: 100%;
+}
+.div1 {
+    display: flex;
+    flex-direction: row;
+    row-gap: 0px;
+}
+.img1 {
+    flex-wrap: wrap;
+    margin: 0px;
+}
+.div2 {
+    row-gap: 20px;
+    column-gap: 20px;
+}
+.workandbtn {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    //margin-top: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+        margin-top: 20px;
+        gap: 24px;
+    }
+
+    @media (max-width: 480px) {
+        margin-top: 16px;
+        gap: 16px;
+    }
+}
+.worknlists {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    background-color: #fff;
+
+    @media (max-width: 768px) {
+        margin-top: 20px;
+        gap: 24px;
+    }
+
+    @media (max-width: 480px) {
+        margin-top: 16px;
+        gap: 16px;
+    }
+}
+.wrapping {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 0px;
+    width: 100%;
+    max-width: none;
+
+    @media (min-width: 1280px) {
+        max-width: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.div3 {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+    padding: 40px;
+    width: 100vw;
+    max-width: none;
+    background-color: #ffffff;
+
+    @media (max-width: 768px) {
+        padding: 20px;
+        margin-top: 100px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 16px;
+    }
+}
+.main1 {
+    align-items: stretch;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: auto;
+    width: 100%;
+    background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity));
+}
+.div4 {
+    background-color: rgba(16, 16, 16, 0);
+}

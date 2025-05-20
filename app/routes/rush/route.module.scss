@@ -1,0 +1,80 @@
+.article1 {
+    max-width: none;
+    padding: 0px;
+    @media (max-width: 768px) {
+       
+        margin-top: 100px;
+    }
+}
+.img1 {
+    max-width: none;
+    width: 100vw;
+}
+.link {
+    align-items: center;
+    align-content: center;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 120px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 0;
+    cursor: pointer;
+
+    /* Remove underline and focus outlines */
+    text-decoration: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+
+    /* Use clamp for font size on button to scale nicely */
+    font-size: clamp(1.5rem, 10vw, 12.5rem);
+    align-self: center;
+    text-align: center; /* from 24px up to 200px approx */
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+
+        .span2 {
+            color: #c2181b;
+        }
+    }
+
+    /* Optional: better spacing on small screens */
+    @media (max-width: 400px) {
+        gap: 12px;
+        margin-top: 60px;
+        padding: 8px;
+    }
+}
+.span2 {
+    font-size: clamp(2rem, 8vw + 1rem, 14.375rem);
+    line-height: 120%;
+    font-weight: 500;
+    font-family: Matter, sans-serif;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: -10px;
+    transition: color 0.3s ease;
+    align-items: center;
+    justify-items: center;
+    align-self: center;
+
+    @media (max-width: 1024px) and (min-width: 769px) {
+        /* This targets iPad Pro sizes and similar */
+        font-size: 8rem; /* smaller than desktop but bigger than tablet */
+        letter-spacing: -3px; /* a bit less tight */
+    }
+
+    @media (max-width: 768px) {
+        letter-spacing: -0.3rem;
+        font-size: 6rem; /* for normal tablets */
+    }
+
+    @media (max-width: 400px) {
+        letter-spacing: normal;
+        font-size: 3.5rem; /* for phones */
+    }
+}

@@ -1,94 +1,80 @@
-import classNames from 'classnames';
-import styles from './_index.module.scss';
-import { LinksFunction, LoaderFunctionArgs, MetaFunction } from '@remix-run/node';
-import commonStyles from '~/styles/common-styles.module.scss';
+import { LoaderFunctionArgs } from '@remix-run/node';
 import { getUrlOriginWithPath } from '~/utils';
+import { IntroSection } from './IntroSection'; // Assuming named export
+import { WorkSection } from './WorkSection'; // Assuming named export
+import { ProjectsGrid } from './ProjectsGrid'; // Assuming named export
+import { MoreProjectsCTA } from './MoreProjectsCTA';
+import styles from './route.module.scss';
+import classNames from 'classnames'; // Assuming named export
+import { useEffect } from 'react'; // 👈 add this
 
+// Loader function for handling data fetching (optional)
 export const loader = ({ request }: LoaderFunctionArgs) => {
     return { canonicalUrl: getUrlOriginWithPath(request.url) };
 };
 
+// HomePage component definition
+// HomePage component definition
 export default function HomePage() {
+    useEffect(() => {
+                window.scrollTo(0, 0);
+            }, []);
     return (
-        <div className={styles.root}>
-            <div className={styles.title}>I'M A TITLE</div>
-            <div className={styles.paragraph}>
-                <div className={styles.text}>
-                    I’m a paragraph. Add your own text and edit me on properties panel on the right.
-                    It’s easy. Just select me and make changes to the font on the styles panel on
-                    the right. I’m a great place for you to tell a story and let your viewers know a
-                    little more about you.
+        <div
+            className={classNames(
+                'flex',
+                'overflow-hidden',
+                'gap-2.5',
+                'items-center',
+                'p-10',
+                'bg-white',
+                'max-md:px-5',
+                styles.div3
+            )}
+        >
+            <main
+                className={classNames(
+                    'self-stretch',
+                    'my-auto',
+                    'bg-white',
+                    'min-w-60',
+                    'w-full', // Ensure the main section uses full width
+                    styles.main1
+                )}
+            >
+                <div className={classNames('w-full', 'max-md:max-w-full', styles.wrapping)}>
+                    <IntroSection />
+                    <div
+                        className={classNames(
+                            'mt-44',
+                            'w-full',
+                            'max-md:mt-10',
+                            'max-md:max-w-full',
+                            styles.worknlists
+                        )}
+                    >
+                        <div className="w-full max-md:max-w-full">
+                            <WorkSection />
+                            <section
+                                className={classNames(
+                                    'flex',
+                                    'flex-col',
+                                    'mt-32',
+                                    'w-full', // Ensure this section is full width
+                                    'leading-tight',
+                                    'text-stone-950',
+                                    'max-md:mt-10',
+                                    'max-md:max-w-full',
+                                    styles.workandbtn
+                                )}
+                            >
+                                <ProjectsGrid />
+                                <MoreProjectsCTA />
+                            </section>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <button className={classNames(commonStyles.primaryButton, styles.button)}>
-                Learn more
-            </button>
-            <img
-                src="https://images.unsplash.com/photo-1622542796254-5b9c46ab0d2f?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dwixplosives.github.io/codux-assets-storage/add-panel/image-placeholder.jpg"
-                alt=""
-                className={styles.image}
-            />
+            </main>
         </div>
     );
 }
-
-export const meta: MetaFunction<typeof loader> = ({ data }) => {
-    const title = 'Website Starter';
-    const description = 'Welcome to the Website Starter';
-    const imageUrl = 'https://website-starter.com/og-image.png';
-
-    return [
-        { title },
-        {
-            name: 'description',
-            content: description,
-        },
-        {
-            tagName: 'link',
-            rel: 'canonical',
-            href: data?.canonicalUrl,
-        },
-        {
-            property: 'robots',
-            content: 'index, follow',
-        },
-        {
-            property: 'og:title',
-            content: title,
-        },
-        {
-            property: 'og:description',
-            content: description,
-        },
-        {
-            property: 'og:image',
-            content: imageUrl,
-        },
-        {
-            name: 'twitter:card',
-            content: 'summary_large_image',
-        },
-        {
-            name: 'twitter:title',
-            content: title,
-        },
-        {
-            name: 'twitter:description',
-            content: description,
-        },
-        {
-            name: 'twitter:image',
-            content: imageUrl,
-        },
-    ];
-};
-
-export const links: LinksFunction = () => {
-    return [
-        {
-            rel: 'icon',
-            href: '/favicon.ico',
-            type: 'image/ico',
-        },
-    ];
-};

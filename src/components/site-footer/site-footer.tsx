@@ -1,11 +1,9 @@
 import classNames from 'classnames';
 import styles from './site-footer.module.scss';
-import facebookIcon from '~/assets/svg/facebook.svg';
-import twitterxIcon from '~/assets/svg/twitterx.svg';
-import discordIcon from '~/assets/svg/discord.svg';
-import youtubeIcon from '~/assets/svg/youtube.svg';
-import mediumIcon from '~/assets/svg/medium.svg';
-import githubIcon from '~/assets/svg/github.svg';
+import InstagramLogoSvg from '../../assets/instagram-logo.svg';
+import LinkedinLogoSvg from '../../assets/linkedin-logo.svg';
+import XLogoSvg from '../../assets/x-logo.svg';
+import { Link } from 'react-router-dom';
 
 export interface FooterProps {
     className?: string;
@@ -19,35 +17,32 @@ export const Footer = ({ className }: FooterProps) => {
     return (
         <div className={classNames(styles.root, className)}>
             <div className={styles.details}>
-                <div>Contact Jane Doe</div>
-                <div className={styles.small}>
-                    Mail: info@mysite.com
+                {/* ✅ Wrap the entire clickable area inside Link */}
+                <Link
+    to="/contact"
+    className={classNames(styles.small)}
+    style={{ color: 'inherit', textDecoration: 'none' }}
+>
+    Contact
+    <br />
+    <br />
+</Link>
+
+                <div className={styles.blur}>
+                    Copyright © 2025 Bamlak W/tinsae.
                     <br />
-                    Tel: 123-456-7890
-                    <br />
-                    500 Terry Francine Street,
-                    <br />
-                    San Francisco, CA 94158
                 </div>
             </div>
+
             <div className={styles.social}>
-                <a href="/">
-                    <img className={styles.icon} src={twitterxIcon} alt="twitter" />
+                <a href="https://www.linkedin.com/in/bamlak-w-tinsae-99496a366/" target="_blank" rel="noopener noreferrer">
+                    <img className={styles.icon} src={LinkedinLogoSvg} alt="LinkedIn" />
                 </a>
-                <a href="/">
-                    <img className={styles.icon} src={facebookIcon} alt="facebook" />
+                <a href="https://www.instagram.com/bamlakwtinsae/" target="_blank" rel="noopener noreferrer">
+                    <img className={styles.icon} src={InstagramLogoSvg} alt="Instagram" />
                 </a>
-                <a href="/">
-                    <img className={styles.icon} src={discordIcon} alt="discord" />
-                </a>
-                <a href="/">
-                    <img className={styles.icon} src={youtubeIcon} alt="youtube" />
-                </a>
-                <a href="/">
-                    <img className={styles.icon} src={mediumIcon} alt="medium" />
-                </a>
-                <a href="/">
-                    <img className={styles.icon} src={githubIcon} alt="github" />
+                <a href="https://x.com/Bamlakwtinsae" target="_blank" rel="noopener noreferrer">
+                    <img className={styles.icon} src={XLogoSvg} alt="X / Twitter" />
                 </a>
             </div>
         </div>

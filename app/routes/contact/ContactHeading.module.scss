@@ -1,0 +1,17 @@
+.header1 {
+    font-family: 'Matter', sans-serif;
+    font-weight: 500;
+    font-size: clamp(3rem, 20vw, 18rem); // scales from 3rem on small screens up to 18rem on large
+    line-height: 1.2;
+    letter-spacing: -0.6rem;
+    align-items: center; // Adjust for tighter spacing on bigger screens
+
+    // Adjust letter-spacing on smaller devices for readability
+    @media (max-width: 768px) {
+        letter-spacing: -0.3rem;
+    }
+
+    @media (max-width: 400px) {
+        letter-spacing: normal;
+    }
+}

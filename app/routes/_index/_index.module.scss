@@ -1,47 +1,75 @@
-@use '@styles/general' as general;
+:root {
+    --max-width: 1200px;  /* Optional max-width to prevent layout stretching on large screens */
+    --side-padding: 1rem;
+}
 
 .root {
+    justify-content: center;
     display: flex;
     flex-direction: column;
     row-gap: 0.5em;
-    background-color: var(--snow-white);
+    background-color: #ffffff;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
     padding-top: 2em;
     padding-bottom: 2em;
+    padding-right: 1em;
+    padding-left: 1em;
+    height: auto;
+    min-width: auto;
+    object-fit: fill;
 }
 
-.title {
-    font: var(--heading1);
-    text-align: center;
-    letter-spacing: 0.4rem;
-
-    @media only screen and (max-width: general.$mobile-width) {
-        font-size: 3rem;
-    }
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12em;
+    width: 100%;  /* Full width */
+    max-width: var(--max-width);  /* Optional: limit max width */
 }
 
-.paragraph {
-    text-align: center;
+.latestWorkContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    width: 100%;  /* Full width */
+}
+
+.workGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    width: 100%;  /* Full width */
+}
+
+.workRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    width: 100%;  /* Full width */
+}
+
+.workCard {
+    width: 100%;  /* Allow cards to stretch */
+    max-width: 500px; /* Optional: limit max width of cards */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.moreProjects {
     display: flex;
     justify-content: center;
-    margin-bottom: 1.5em;
-    font: var(--paragraph1);
-
-    @media only screen and (max-width: general.$mobile-width) {
-        font-size: 1rem;
-    }
+    align-items: center;
+    gap: 1em;
+    width: 100%; /* Full width */
 }
 
-.text {
-    width: 60%;
-}
-
-.button {
-    align-self: center;
-}
-
-.image {
-    align-self: center;
-    height: 14em;
-    margin-top: 1em;
-    width: 24em;
+.moreProjectsText {
+    font: var(--heading1);
+    font-size: 2rem;
+    color: #101010;
 }

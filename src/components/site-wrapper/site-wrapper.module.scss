@@ -1,17 +1,40 @@
+@import '../../styles/general.scss';
+:root {
+    --max-width: 1200px;
+    --side-padding: 1rem;
+}
+
 .root {
-    width: 100%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* create a stacking context for the app */
-    isolation: isolate;
+    background-color: var(--snow-white);
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100%;
 }
 
 .content {
-    min-height: min-content;
     flex-grow: 1;
-    background-color: #f5f5f5;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    padding-inline: var(--side-padding);
+    //padding-block: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.content > * {
+    width: 100%;
+    max-width: $desktop-width;
+}
+.full-width {
+    max-width: none;
+    padding-inline: 0; /* Removes padding */
 }

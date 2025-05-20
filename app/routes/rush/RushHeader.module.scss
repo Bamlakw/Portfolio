@@ -1,0 +1,140 @@
+.header1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 40px; // reduced for smaller screens
+    color: #111;
+}
+
+.div3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 0;
+    gap: 30px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+.div1 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 20px;
+    color: #111;
+}
+
+.header2 {
+    font-family: 'Matter', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    color: #111;
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+.a1 {
+    color: inherit; // Use black from header2 (#111)
+    text-decoration: underline; // underline always, or change to 'none' if you want hover only
+    text-underline-offset: 3px; // subtle offset to make underline prettier
+
+    &:hover {
+        text-decoration: underline; // Keep underline on hover, or change style if you want
+    }
+}
+
+.div2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 778px;
+    color: #111;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+.p1 {
+    font-family: 'Matter', sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    letter-spacing: -0.6px;
+    color: #111;
+    width: 600px;
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+        line-height: 28px;
+        width: 100%;
+    }
+}
+
+.header4 {
+    font-family: 'Matter', sans-serif;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.8px;
+    font-weight: 600;
+
+    @media (max-width: 768px) {
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
+
+.div5 {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Matter', sans-serif;
+    color: #111;
+}
+
+.div6 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+}
+
+.div7 {
+    padding-top: 40px;
+}
+
+.div4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #111;
+}
+
+.p2 {
+    color: #000;
+    text-decoration: none;
+}
+
+.image,
+.logoimage {
+    max-width: 100%;
+}
+.a1 {
+    font-size: 20px;
+}

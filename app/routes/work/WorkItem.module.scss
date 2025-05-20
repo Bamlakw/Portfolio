@@ -1,0 +1,22 @@
+.header1 {
+    font-size: 20px;
+    line-height: 24.3px;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    font-family: Matter;
+
+     &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+.img1 {
+    max-width: none;
+    min-width: auto;
+    width: 100%;
+}
+.header1 a:hover {
+    color: #000000;
+    text-decoration: underline;
+    text-decoration-color: #000000;
+}

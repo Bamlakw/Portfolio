@@ -10,6 +10,7 @@ import {
 import { ErrorComponent } from '~/components/error-component/error-component';
 import { SiteWrapper } from '~/components/site-wrapper/site-wrapper';
 import '~/styles/index.scss';
+import styles from './root.module.scss';
 
 export function Layout({ children }: { children: React.ReactNode }) {
     return (
@@ -31,7 +32,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
     return (
-        <SiteWrapper>
+        <SiteWrapper className={styles.siteWrapper}>
             <Outlet />
         </SiteWrapper>
     );

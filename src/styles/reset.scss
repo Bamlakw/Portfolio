@@ -11,7 +11,10 @@
 }
 /* 2. Remove default margin */
 * {
-    margin: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-top: 0px;
 }
 body {
     /* 3. Add accessible line-height */
@@ -48,14 +51,9 @@ h6 {
 /* 8. Improve line wrapping */
 p {
     text-wrap: pretty;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    text-wrap: balance;
+    align-items: stretch;
+    font-size: 24px;
+    line-height: 26px;
 }
 
 /* Custom additions to the original Josh Comeau reset by Codux */

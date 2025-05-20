@@ -1,9 +1,20 @@
 .root {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     height: 64px;
-    padding: 0 20px;
+    padding: 40px;
+    width: 100%;
+    align-items: center;
+    background-color: #ffffff;
+    font-family: Matter;
+    @media (max-width: 768px) {
+        padding: 20px;
+        
+    }
+
+    @media (max-width: 480px) {
+        padding: 16px;
+    }
 }
 
 .menu {
@@ -35,4 +46,45 @@
     .logo {
         display: none;
     }
+}
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    align-items: center;
+    
+}
+.header2 {
+    line-height: 20px;
+    font-weight: 400;
+    min-height: 0px;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 0px;
+    font-family: Matter;
+    font-size: 24px;
+    letter-spacing: -0.9px;
+    color: inherit;
+    outline: none !important; /* Make sure h1 has no outline */
+    box-shadow: none !important;
+}
+.navLink {
+    color: inherit;
+    outline: none !important; /* Make sure outline is removed */
+    box-shadow: none !important; /* Remove box-shadow */
+    -webkit-tap-highlight-color: transparent; /* Mobile friendliness */
+}
+
+.navLink:focus,
+.navLink:active,
+.navLink:focus-visible {
+    outline: none !important;
+    box-shadow: none !important; /* Ensure no focus styles are added */
+}
+
+.navLink:hover {
+    color: inherit; /* Keep the color as it is, remove any hover color changes */
+    background-color: transparent; /* Ensure background doesn't change */
 }

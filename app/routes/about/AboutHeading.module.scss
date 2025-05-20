@@ -1,0 +1,33 @@
+.header1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.42px;
+    white-space: normal; // Allow wrapping on smaller devices
+}
+
+.header2 {
+    font-family: 'Matter', sans-serif;
+    font-weight: 500;
+    font-size: clamp(4rem, 20vw, 20rem); // scales from 3rem on small screens up to 18rem on large
+    line-height: 1.2;
+    letter-spacing: -0.6rem; // Adjust for tighter spacing on bigger screens
+
+    // Adjust letter-spacing on smaller devices for readability
+    @media (max-width: 768px) {
+        letter-spacing: -0.3rem;
+    }
+
+    @media (max-width: 400px) {
+        letter-spacing: normal;
+    }
+}
+
+.hr1 {
+    border: 1px solid black;
+    width: 100%;
+}

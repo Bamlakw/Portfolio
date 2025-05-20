@@ -1,0 +1,22 @@
+.header1 {
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    display: flex;
+}
+.div1 {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+}
+.header2 {
+    font-size: 30px;
+    line-height: 120%;
+    font-weight: 400;
+}
+.div2 {
+    align-items: center;
+    display: flex;
+    justify-content: end;
+    width: 778px;
+}
